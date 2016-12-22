@@ -1,0 +1,11 @@
+在http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml把数据下好,扔到同一个文件夹
+
+进rmcol_taxi.py里面把input_file改一下
+跑 python rmcol_taxi.py, 会产生一个rmcol_.....的csv
+
+跑这个不用太久
+
+进process_taxi.py把name改成刚才生成的文件名
+然后跑 python process_taxi.py, 会生成一个processed_....的csv
+
+跑这个巨慢,大家给点耐心,生成的文件大小应该是上一步的3/4左右,可以看文件大小来判断进度
