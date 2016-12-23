@@ -1,1 +1,8 @@
-
+# Dataset overview
+In this project three datasets are used: TLC yellow taxi trip record dataset, NYC Uber ride dataset and historical weather dataset.
+## Weather data
+The historical weather data are fetched from http://weathersource.com/, which provides free historical weather data lookup through HTTP request. User provides location and time information in the HTTP request and will receive the corresponding weather data.
+## Yellow Taxi data
+The official TLC trip record dataset contains data for over 1 billion taxi trips from January 2009 through June 2016. Each individual trip record contains precise location coordinates for where the trip started and ended, timestamps for when the trip started and ended, plus a few other variables including fare amount, payment method, and distance traveled. In our processing, we will first throw out unnecessary information like drop-off location & time, travel distance. Then we run the Ray-casting algorithm to turn coordinates of latitude and longitude into our pre-defined neighborhoods polygons of NYC. Ray-casting algorithm can tell whether a coordinate lies in the polygon defined by a series of coordinates. Then for each set of unique feature combination of pickup_location, hour, weather, is_bussiness_day, temperature_category, we calculate the average rides in hour, average trip fare and tips. Finally we combine the data of each month and turn it into the correct format to feed into the model for training.
+## Uber data
+The Uber trip data we used is some publicly available data covering nearly 19 million Uber rides in NYC from April–September 2014 and January–June 2015. The Uber data is not as detailed as the taxi data, in particular Uber provides time and location for pickups only, not drop offs. For these data, we will only count for its total ride numbers and analyze the trend of Uber and taxi business.
