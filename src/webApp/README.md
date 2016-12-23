@@ -1,5 +1,6 @@
 # Yellow Taxi Prediciton Website 
 This website is design and built for big daya analysis project. The whole structure is build in AWS cloud service.
+Please visit http://www.teximap.com.s3-website-us-east-1.amazonaws.com/ for more details.
 ## Front End
 The front end of the web mainly used AngularJS for developing. Google Map API and Open Weather API are also used for map display and weather prediction.
 Index.html file is the front-end display file, and AngularJS controller file is maps.js. They are all stored in AWS S3 Bucket so that it can be easily reached from browser. 
